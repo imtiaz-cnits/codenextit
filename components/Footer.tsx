@@ -25,9 +25,9 @@ export default function Footer() {
             <div>
               <h4 className="text-base font-bold text-white mb-6">Company</h4>
               <ul className="space-y-4 text-sm font-semibold text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Services</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Services</a></li>
               </ul>
@@ -55,8 +55,8 @@ export default function Footer() {
                 <li className="flex items-start">
                   <Phone className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
                   <div className="leading-relaxed">
-                    <p>+880 01788 428 280</p>
-                    <p>+880 01300 793 313</p>
+                    <p>+880 1788 428 280</p>
+                    <p>+880 1300 793 313</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -94,24 +94,20 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex space-x-3">
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
+            <a href="https://www.facebook.com/codenextit" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
               <Facebook className="w-[18px] h-[18px]" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
+            <a href="https://www.linkedin.com/company/codenextit/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
               <Linkedin className="w-[18px] h-[18px]" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
+            <a href="https://www.behance.net/codenextit" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
               <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-3.213-2.556-3.213-1.465 0-2.274 1.175-2.409 3.213zm-11.444 7h-6.285v-15h7.014c2.614 0 4.046 1.488 4.046 3.652 0 1.94-1.258 2.804-2.831 3.125 1.921.36 3.149 1.579 3.149 3.738 0 2.502-1.83 4.485-5.093 4.485zm-2.054-6.559h-2.915v-3.793h2.645c1.199 0 2.158.463 2.158 1.879 0 1.482-1.042 1.914-2.188 1.914zm.299 5.867h-3.214v-4.103h3.048c1.685 0 2.656.452 2.656 2.05 0 1.637-1.168 2.053-2.49 2.053z"/></svg>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
+            <a href="https://www.instagram.com/codenextit/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
               <Instagram className="w-[18px] h-[18px]" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
-              <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
-
       </div>
 
       {/* Massive Brand Text */}

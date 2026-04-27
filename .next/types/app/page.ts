@@ -1,4 +1,4 @@
-// File: D:\Power House Bckp\Running Works\05. Personal Projects\codenext-it-redesign\app\page.tsx
+// File: D:\Power House Bckp\Running Works\05. Personal Projects\codenextit\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
