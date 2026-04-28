@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'motion/react';
-import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown, Server, Cloud } from 'lucide-react';
 import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +18,8 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services', hasMegaMenu: true },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Hosting', href: '/hosting' },
-    { name: 'Career', href: '/career' },
+    { name: 'Hosting', href: '', hasMegaMenu: true },
+    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' }
   ];
 
@@ -58,7 +58,7 @@ export default function Navbar() {
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-accent group-hover:w-full transition-all duration-300" />
                 </a>
 
-                {link.hasMegaMenu && (
+                {link.hasMegaMenu && link.name === 'Services' && (
                   <div className="absolute top-full right-1/2 translate-x-[30%] lg:translate-x-[50%] pt-8 w-[680px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="bg-white dark:bg-[#0a0a0a] rounded-3xl shadow-2xl border border-slate-100 dark:border-white/5 p-6 grid grid-cols-2 gap-4 relative overflow-hidden">
                       <div className="absolute top-0 right-0 w-40 h-40 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none" />
@@ -103,6 +103,34 @@ export default function Navbar() {
                         </div>
                       </a>
 
+                    </div>
+                  </div>
+                )}
+
+                {link.hasMegaMenu && link.name === 'Hosting' && (
+                  <div className="absolute top-full right-1/2 translate-x-[30%] lg:translate-x-[50%] pt-8 w-[680px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="bg-white dark:bg-[#0a0a0a] rounded-3xl shadow-2xl border border-slate-100 dark:border-white/5 p-6 grid grid-cols-2 gap-4 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-40 h-40 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none" />
+
+                      <a href="/web-hosting" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                        <div className="w-12 h-12 bg-blue-50 dark:bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <Cloud className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1">Web Hosting</h4>
+                          <p className="text-slate-500 text-sm leading-relaxed font-medium">Fast, reliable, and affordable hosting for your online presence.</p>
+                        </div>
+                      </a>
+
+                      <a href="/bdix-vps" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                        <div className="w-12 h-12 bg-purple-50 dark:bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <Server className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1">BDIX VPS</h4>
+                          <p className="text-slate-500 text-sm leading-relaxed font-medium">High-performance virtual servers with 1Gbps BDIX connectivity.</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 )}

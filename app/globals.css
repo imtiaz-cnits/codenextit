@@ -56,4 +56,11 @@
   .tech-gradient {
     @apply bg-gradient-to-tr from-brand-primary to-brand-accent;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
