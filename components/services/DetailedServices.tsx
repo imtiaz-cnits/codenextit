@@ -3,10 +3,12 @@ import { motion } from 'motion/react';
 import { 
   Code, Palette, Database, PenTool, 
   Smartphone, Share2, GraduationCap, Server, 
-  CheckCircle2, ArrowRight
+  CheckCircle2, ArrowRight, BarChart, Bot
 } from 'lucide-react';
+import { useModal } from '../ModalContext';
 
 export default function DetailedServices() {
+  const { openBookingModal } = useModal();
   const services = [
     {
       title: 'Management Softwares',
@@ -21,7 +23,8 @@ export default function DetailedServices() {
         'Inventory Management',
         'Diagnostic Center Management',
         'Custom ERP Solutions'
-      ]
+      ],
+      slug: '/services/management-software'
     },
     {
       title: 'Web Development',
@@ -36,7 +39,8 @@ export default function DetailedServices() {
         'Agency Website',
         'Hotel & Restaurant Websites',
         'Custom Web Apps'
-      ]
+      ],
+      slug: '/services/web-development'
     },
     {
       title: 'UI/UX Design',
@@ -51,22 +55,24 @@ export default function DetailedServices() {
         'Website UI',
         'Software Dashboard',
         'Mobile App UI'
-      ]
+      ],
+      slug: '/services/ui-ux-design'
     },
     {
-      title: 'Graphics Design',
-      desc: 'Unleash creativity with our graphic design solutions. Establish a powerful visual brand identity.',
-      icon: Palette,
-      accent: 'text-rose-500',
-      bgAccent: 'bg-rose-500/10',
-      borderAccent: 'group-hover:border-rose-500/50',
-      shadowAccent: 'hover:shadow-rose-500/10',
+      title: 'Digital Marketing & SEO',
+      desc: 'Drive organic traffic and enhance your online visibility. Our data-driven strategies ensure maximum ROI for your business.',
+      icon: BarChart,
+      accent: 'text-blue-500',
+      bgAccent: 'bg-blue-500/10',
+      borderAccent: 'group-hover:border-blue-500/50',
+      shadowAccent: 'hover:shadow-blue-500/10',
       subServices: [
-        'Logo & Branding Design',
-        'Social Media Poster',
-        'Stationary Item Design',
-        'Marketing Materials'
-      ]
+        'Search Engine Optimization',
+        'Social Media Marketing',
+        'PPC & Ad Campaigns',
+        'Content Strategy'
+      ],
+      slug: '/services/digital-marketing'
     },
     {
       title: 'App Development',
@@ -84,18 +90,18 @@ export default function DetailedServices() {
       ]
     },
     {
-      title: 'Digital Marketing',
-      desc: 'Get help growing your business through effective digital marketing and social media strategies.',
-      icon: Share2,
-      accent: 'text-blue-500',
-      bgAccent: 'bg-blue-500/10',
-      borderAccent: 'group-hover:border-blue-500/50',
-      shadowAccent: 'hover:shadow-blue-500/10',
+      title: 'AI/ML Solutions',
+      desc: 'Future-proof your business with cutting-edge AI integration. Automate complex tasks and gain deeper insights.',
+      icon: Bot,
+      accent: 'text-amber-500',
+      bgAccent: 'bg-amber-500/10',
+      borderAccent: 'group-hover:border-amber-500/50',
+      shadowAccent: 'hover:shadow-amber-500/10',
       subServices: [
-        'Social Media Management',
-        'Search Engine Optimization (SEO)',
-        'Pay-Per-Click (PPC)',
-        'Content Marketing'
+        'AI Chatbot Integration',
+        'Predictive Analytics',
+        'Process Automation',
+        'Custom ML Models'
       ]
     },
     {
@@ -111,21 +117,6 @@ export default function DetailedServices() {
         'Premium BDIX VPS',
         'Dedicated Servers',
         'Domain Registration'
-      ]
-    },
-    {
-      title: 'Industrial Training',
-      desc: 'Learn from our expert and skilled mentors. Get a chance to leverage skills on selective subjects.',
-      icon: GraduationCap,
-      accent: 'text-amber-500',
-      bgAccent: 'bg-amber-500/10',
-      borderAccent: 'group-hover:border-amber-500/50',
-      shadowAccent: 'hover:shadow-amber-500/10',
-      subServices: [
-        'Web Development Course',
-        'UI/UX Design Masterclass',
-        'App Development Training',
-        'Career Guideline Seminars'
       ]
     }
   ];
@@ -170,9 +161,17 @@ export default function DetailedServices() {
                     </li>
                   ))}
                 </ul>
-                <button className={`inline-flex items-center font-bold ${service.accent} group/btn`}>
-                  Discuss Project <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                <div className="flex flex-wrap items-center gap-6 mt-4">
+                  <a href={service.slug || "#"} className={`inline-flex items-center font-bold ${service.accent} group/btn`}>
+                    Learn More <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                  <button 
+                    onClick={openBookingModal}
+                    className={`px-6 py-2.5 rounded-xl text-white font-bold text-sm ${service.accent.replace('text-', 'bg-')} shadow-lg shadow-current/20 hover:scale-105 transition-all`}
+                  >
+                    Get Started
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}

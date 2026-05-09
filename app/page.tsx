@@ -7,7 +7,7 @@ import TrustAndTech from '../components/home/TrustAndTech';
 import Process from '../components/home/Process';
 import Hosting from '../components/home/Hosting';
 import Portfolio from '../components/home/Portfolio';
-import Training from '../components/home/Training';
+import Testimonials from '../components/home/Testimonials';
 import CallToAction from '../components/home/CallToAction';
 import Footer from '../components/Footer';
 import ThemeToggle from '../components/ThemeToggle';
@@ -26,7 +26,7 @@ export default function Home() {
         <Process />
         <Hosting />
         <Portfolio />
-        <Training />
+        <Testimonials />
       </main>
       <CallToAction />
       <Footer />

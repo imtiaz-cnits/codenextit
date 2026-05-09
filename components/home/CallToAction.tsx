@@ -1,8 +1,10 @@
 "use client";
 import { motion } from 'motion/react';
 import { ArrowRight, PhoneCall, Sparkles } from 'lucide-react';
+import { useModal } from '../ModalContext';
 
 export default function CallToAction() {
+  const { openBookingModal } = useModal();
   return (
     <section className="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
       {/* Background Decor */}
@@ -53,10 +55,13 @@ export default function CallToAction() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <a href="#contact" className="bg-brand-accent text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-brand-primary dark:hover:bg-white dark:hover:text-black transition-all group shadow-lg shadow-brand-accent/20">
+                <button 
+                  onClick={openBookingModal}
+                  className="bg-brand-accent text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-brand-primary dark:hover:bg-white dark:hover:text-black transition-all group shadow-lg shadow-brand-accent/20"
+                >
                   Start a Project
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
                 <a href="tel:+88001788428280" className="bg-white dark:bg-white/5 text-brand-primary dark:text-white border border-slate-200 dark:border-white/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:border-brand-accent dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
                   <PhoneCall className="w-5 h-5 mr-2 text-brand-accent group-hover:scale-110 transition-transform" />
                   Call Us Now

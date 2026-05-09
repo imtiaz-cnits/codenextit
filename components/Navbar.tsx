@@ -1,10 +1,13 @@
 "use client";
 import { motion } from 'motion/react';
-import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown, Server, Cloud } from 'lucide-react';
+import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown, Server, Cloud, BarChart, Bot } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useModal } from './ModalContext';
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { openBookingModal } = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +66,7 @@ export default function Navbar() {
                     <div className="bg-white dark:bg-[#0a0a0a] rounded-3xl shadow-2xl border border-slate-100 dark:border-white/5 p-6 grid grid-cols-2 gap-4 relative overflow-hidden">
                       <div className="absolute top-0 right-0 w-40 h-40 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none" />
 
-                      <a href="#services" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                      <a href="/services/management-software" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
                         <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
                           <Settings className="w-6 h-6" />
                         </div>
@@ -73,7 +76,7 @@ export default function Navbar() {
                         </div>
                       </a>
 
-                      <a href="#services" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                      <a href="/services/web-development" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
                         <div className="w-12 h-12 bg-emerald-50 dark:bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
                           <Code2 className="w-6 h-6" />
                         </div>
@@ -83,7 +86,7 @@ export default function Navbar() {
                         </div>
                       </a>
 
-                      <a href="#services" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                      <a href="/services/ui-ux-design" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
                         <div className="w-12 h-12 bg-rose-50 dark:bg-rose-500/10 rounded-xl flex items-center justify-center text-rose-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
                           <Layout className="w-6 h-6" />
                         </div>
@@ -93,16 +96,15 @@ export default function Navbar() {
                         </div>
                       </a>
 
-                      <a href="#services" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
-                        <div className="w-12 h-12 bg-amber-50 dark:bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
-                          <PenTool className="w-6 h-6" />
+                      <a href="/services/digital-marketing" className="flex items-start p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group/item">
+                        <div className="w-12 h-12 bg-blue-50 dark:bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <BarChart className="w-6 h-6" />
                         </div>
                         <div>
-                          <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1">Graphics Design</h4>
-                          <p className="text-slate-500 text-sm leading-relaxed font-medium">Unleash creativity with our graphic design solutions.</p>
+                          <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1">Digital Marketing & SEO</h4>
+                          <p className="text-slate-500 text-sm leading-relaxed font-medium">Drive growth and visibility with our data-driven marketing.</p>
                         </div>
                       </a>
-
                     </div>
                   </div>
                 )}
@@ -137,6 +139,7 @@ export default function Navbar() {
               </div>
             ))}
             <motion.button
+              onClick={openBookingModal}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-brand-accent to-cyan-500 text-white pl-6 pr-2 py-2 rounded-xl text-[12px] md:text-[12px] font-bold uppercase tracking-widest flex items-center group overflow-hidden relative shadow-lg shadow-brand-accent/25 border border-white/10"
@@ -179,7 +182,13 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <button className="w-full mt-4 bg-gradient-to-r from-brand-accent to-cyan-500 text-white px-6 py-3 rounded-xl text-base font-bold shadow-lg shadow-brand-accent/25 border border-white/10">
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              openBookingModal();
+            }}
+            className="w-full mt-4 bg-gradient-to-r from-brand-accent to-cyan-500 text-white px-6 py-3 rounded-xl text-base font-bold shadow-lg shadow-brand-accent/25 border border-white/10"
+          >
             Book a Meeting
           </button>
         </div>

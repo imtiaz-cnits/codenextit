@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'motion/react';
-import { Code, Palette, Share2, GraduationCap, Cpu, Lock } from 'lucide-react';
+import { Code, Palette, Share2, Bot, Cpu, BarChart, GraduationCap } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -23,9 +23,9 @@ export default function Services() {
       accent: 'text-emerald-500',
     },
     {
-      title: 'Graphics Design',
-      desc: 'Unlock creativity with our graphic design services.',
-      icon: Palette,
+      title: 'Digital Marketing & SEO',
+      desc: 'Drive growth and visibility with our data-driven marketing.',
+      icon: BarChart,
       accent: 'text-rose-500',
     },
     {
@@ -41,9 +41,9 @@ export default function Services() {
       accent: 'text-blue-500',
     },
     {
-      title: 'Training/Course',
-      desc: 'Learn from our expert and skilled mentors.',
-      icon: GraduationCap,
+      title: 'AI/ML Solutions',
+      desc: 'Future-proof your business with cutting-edge AI integration.',
+      icon: Bot,
       accent: 'text-amber-500',
     },
     {

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Portfolio() {
   const projects = [
@@ -9,30 +10,35 @@ export default function Portfolio() {
       category: 'Premium Digital Marketplace for Web Templates & Assets',
       image: '/images/Themes Jet.png',
       tags: ['React', 'Marketplace'],
+      slug: 'themes-jet'
     },
     {
       title: 'The Ultrasound Source',
       category: 'Medical Equipment E-Commerce',
       image: '/images/The Ultrasound Source.png',
       tags: ['E-Commerce', 'Healthcare'],
+      slug: 'the-ultrasound-source'
     },
     {
       title: 'Montreal Moving',
       category: 'Moving & Relocation Services',
       image: '/images/Montreal Moving.png',
       tags: ['Business', 'Booking'],
+      slug: 'montreal-moving'
     },
     {
       title: 'AKA Moving',
       category: 'Logistics & Transportation Services',
       image: '/images/AKA Moving.png',
       tags: ['Corporate', 'Logistics'],
+      slug: 'aka-moving'
     },
     {
       title: 'SPS Foods',
       category: 'Food Distribution Network',
       image: '/images/SPS Foods.png',
       tags: ['FMCG', 'Web App'],
+      slug: 'sps-foods'
     },
   ];
 
@@ -64,34 +70,35 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group cursor-pointer"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-brand-surface dark:bg-slate-800/20 border border-brand-border dark:border-slate-800/50">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                  <div className="text-white">
-                    <p className="text-sm font-medium mb-1 opacity-80">{project.category}</p>
-                    <h4 className="text-2xl font-bold">{project.title}</h4>
+              <Link href={`/portfolio/${project.slug}`} className="group cursor-pointer">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-brand-surface dark:bg-slate-800/20 border border-brand-border dark:border-slate-800/50">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <div className="text-white">
+                      <p className="text-sm font-medium mb-1 opacity-80">{project.category}</p>
+                      <h4 className="text-2xl font-bold">{project.title}</h4>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="text-xl font-bold text-brand-primary dark:text-white mb-1">{project.title}</h4>
-                  <p className="text-gray-500 dark:text-gray-400">{project.category}</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xl font-bold text-brand-primary dark:text-white mb-1">{project.title}</h4>
+                    <p className="text-gray-500 dark:text-gray-400">{project.category}</p>
+                  </div>
+                  <div className="flex gap-2">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="px-3 py-1 bg-brand-surface dark:bg-slate-800/80 rounded-full text-xs font-semibold text-brand-primary dark:text-slate-300 border border-brand-border dark:border-slate-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-brand-surface dark:bg-slate-800/80 rounded-full text-xs font-semibold text-brand-primary dark:text-slate-300 border border-brand-border dark:border-slate-700">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-  --font-sans: "Figtree", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-secondary: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
   /* Modern Tech Palette */
@@ -25,15 +25,19 @@
   }
   
   body {
-    @apply font-sans bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-accent/30;
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-accent/30;
   }
+  
   p, span {
-    @apply font-secondary;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   }
+  
   h1, h2, h3, h4, h5, h6, button, a {
-    @apply font-sans;
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
   }
-  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, .font-mono p, .font-mono span {
+  
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     font-family: inherit;
   }
 }
