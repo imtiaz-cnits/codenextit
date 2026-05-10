@@ -43,9 +43,9 @@ export default function CallToAction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-lg font-medium"
+                className="text-slate-500 dark:text-slate-400 text-[16px] mb-8 max-w-lg font-medium"
               >
-                Join successful companies who trust CodeNext IT for their web, app, and networking infrastructure needs.
+                Join hundreds of successful businesses who trust CodeNext IT for their web development, app design, and secure networking infrastructure.
               </motion.p>
 
               <motion.div
@@ -55,7 +55,7 @@ export default function CallToAction() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <button 
+                <button
                   onClick={openBookingModal}
                   className="bg-brand-accent text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-brand-primary dark:hover:bg-white dark:hover:text-black transition-all group shadow-lg shadow-brand-accent/20"
                 >
@@ -102,8 +102,8 @@ export default function CallToAction() {
                 transition={{ delay: 0.4, type: "spring", stiffness: 300, damping: 20 }}
                 className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-[2rem] -translate-y-8 shadow-xl shadow-slate-200/50 dark:shadow-none cursor-pointer group"
               >
-                <div className="text-4xl font-black text-brand-primary dark:text-white mb-2 group-hover:text-blue-500 transition-colors">100+</div>
-                <div className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projects Done</div>
+                <div className="text-4xl font-black text-brand-primary dark:text-white mb-2 group-hover:text-blue-500 transition-colors">450+</div>
+                <div className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projects Completed</div>
               </motion.div>
 
               <motion.div

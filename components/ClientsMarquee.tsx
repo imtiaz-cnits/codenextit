@@ -24,11 +24,12 @@ export default function ClientsMarquee({ className = "", hideTitle = false }: { 
     <div className={`w-full overflow-hidden flex flex-col items-center py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-white/5 ${className}`}>
       {!hideTitle && (
         <div className="text-center mb-10 w-full max-w-7xl mx-auto px-4">
-          <h2 className="text-[11px] font-black text-brand-accent tracking-[0.3em] uppercase mb-3">Our Network</h2>
-          <h3 className="text-2xl md:text-4xl font-black text-brand-primary dark:text-white">Trusted by 120+ Clients</h3>
+          <p className="text-[12px] font-black text-brand-accent tracking-[0.3em] uppercase mb-3">OUR TRUSTED PARTNERS
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-brand-primary dark:text-white">Empowering 350+ Businesses</h2>
         </div>
       )}
-      <div 
+      <div
         className="relative w-full max-w-7xl mx-auto overflow-hidden flex items-center py-4"
         style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
       >
@@ -42,8 +43,8 @@ export default function ClientsMarquee({ className = "", hideTitle = false }: { 
             <img
               key={idx}
               src={logo}
-              alt="Client Logo"
-              className="p-2 md:p-3 rounded-2xl max-h-12 md:max-h-14 max-w-[140px] md:max-w-[160px] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 dark:invert dark:hover:invert-0 dark:hover:bg-slate-50"
+              alt={`Trusted Partner Logo - ${logo.split('/').pop()?.split('.')[0]?.replace(/-/g, ' ')} | CodeNext IT`}
+              className="p-2 md:p-3 rounded-2xl max-h-12 md:max-h-14 max-w-[200px] md:max-w-[160px] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 dark:invert dark:hover:invert-0 dark:hover:bg-slate-50"
             />
           ))}
         </motion.div>

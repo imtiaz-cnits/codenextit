@@ -64,7 +64,7 @@ const ReviewCard = ({ review }: { review: any }) => (
         <img src={review.image} alt={review.name} className="w-full h-full object-cover" />
       </div>
       <div>
-        <h4 className="font-black text-brand-primary dark:text-white text-xs group-hover:text-brand-accent dark:group-hover:text-white transition-colors duration-500">{review.name}</h4>
+        <p className="font-black text-brand-primary dark:text-white text-xs group-hover:text-brand-accent dark:group-hover:text-white transition-colors duration-500">{review.name}</p>
         <p className="text-brand-accent dark:group-hover:text-white/80 text-[9px] font-black uppercase tracking-widest mt-0.5 transition-colors duration-500">{review.role}</p>
       </div>
     </div>
@@ -76,15 +76,15 @@ export default function Testimonials() {
     <section className="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16">
         <div className="text-center max-w-3xl mx-auto">
-          <motion.h2
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-black text-brand-accent tracking-[0.3em] uppercase mb-6"
+            className="text-[12px] font-black text-brand-accent tracking-[0.3em] uppercase mb-6"
           >
             Success Stories
-          </motion.h2>
-          <motion.h3
+          </motion.p>
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function Testimonials() {
           >
             Stories of Innovation, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand-accent to-cyan-400">Trust & Global Success.</span>
-          </motion.h3>
+          </motion.h2>
         </div>
       </div>
 

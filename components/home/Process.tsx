@@ -6,22 +6,22 @@ export default function Process() {
   const steps = [
     {
       title: 'Analyze',
-      desc: 'Deep diving into business requirements and market trends.',
+      desc: 'We dive deep into your business goals and local market trends to create a strategic project roadmap.',
       icon: Search,
     },
     {
       title: 'Design',
-      desc: 'Crafting pixel-perfect user experiences and robust architectures.',
+      desc: 'We craft intuitive, modern, and pixel-perfect interfaces that ensure an engaging experience for your target audience.',
       icon: PenTool,
     },
     {
       title: 'Develop',
-      desc: 'Turning designs into high-performance digital products.',
+      desc: 'We write clean and secure code using advanced tech stacks to build high-performance web applications.',
       icon: Code,
     },
     {
       title: 'Deliver',
-      desc: 'Rigorous testing and successful global deployment.',
+      desc: 'Following rigorous quality assurance, we ensure a smooth launch and provide reliable ongoing technical support.',
       icon: CheckCircle,
     },
   ];
@@ -30,12 +30,12 @@ export default function Process() {
     <section className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-sm font-bold text-brand-accent tracking-widest uppercase mb-4">Our Methodology</h2>
-          <h3 className="text-4xl md:text-6xl font-black text-brand-primary dark:text-white mb-6">
-            The <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand-accent to-cyan-400 transition-colors cursor-default">Working Process</span> of Ours.
-          </h3>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg italic">
-            "Serving Knowledge, Quality & Perfection"
+          <span className="text-[12px] font-bold text-brand-accent tracking-widest uppercase mb-6">How We Work</span>
+          <h2 className="text-4xl md:text-[56px] font-black text-brand-primary dark:text-white mt-4 mb-6">
+            Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand-accent to-cyan-400 transition-colors cursor-default">Software & <br /> Web Development</span> Process.
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-[16px] italic">
+            We follow a structured and transparent approach to transform your business ideas into scalable digital solutions.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function Process() {
                   0{idx + 1}
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-brand-primary dark:text-white mb-4">{step.title}</h4>
+              <p className="text-xl font-bold text-brand-primary dark:text-white mb-4">{step.title}</p>
               <p className="text-slate-500 dark:text-slate-400 leading-relaxed px-4">{step.desc}</p>
             </motion.div>
           ))}

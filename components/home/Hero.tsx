@@ -31,7 +31,7 @@ export default function Hero() {
   const floatX3 = useTransform(smoothMouseX, [0, 1920], [-15, 15]);
   const floatY3 = useTransform(smoothMouseY, [0, 1080], [15, -15]);
 
-  const words = ["Technology.", "Innovation.", "Creativity.", "Perfection."];
+  const words = ["Custom Web Development", "Modern UI/UX Design", "Scalable Software Solutions", "Secure IT Networking"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -206,17 +206,25 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 px-2 py-1 rounded-full bg-brand-accent/5 border border-brand-accent/10 mb-4">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+            <motion.div
+              variants={itemVariants}
+              className="inline-flex items-center space-x-3 px-5 py-2 rounded-2xl bg-white/5 dark:bg-brand-accent/5 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 mb-8 shadow-xl shadow-brand-accent/5 group hover:border-brand-accent/30 transition-colors"
+            >
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inset-0 bg-brand-accent blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.25em] leading-none">
+                <span className="text-brand-accent">Trusted</span> IT Solutions Agency
               </span>
-              <span className="text-xs font-bold text-brand-accent uppercase tracking-widest">Innovation Labs</span>
             </motion.div>
 
-            <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-[116px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-4 leading-[1.1] md:leading-[1] text-balance flex flex-col items-center justify-center">
-              <span>We Believe in</span>
-              <div className="relative h-[1em] w-full flex justify-center items-center">
+            <motion.h1 variants={itemVariants} className="text-[40px] md:text-7xl lg:text-[90px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] md:leading-[1.2] text-balance flex flex-col items-center justify-center">
+              <span className="mb-3 md:mb-0">We Specialize in</span>
+              <div className="relative h-[2.2em] md:h-[1em] w-full flex justify-center items-center">
                 <AnimatePresence mode="popLayout">
                   <motion.span
                     key={index}
@@ -224,7 +232,7 @@ export default function Hero() {
                     animate={{ y: 0, opacity: 1, rotateX: 0 }}
                     exit={{ y: -40, opacity: 0, rotateX: 90 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className="absolute text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-500 origin-center pb-2"
+                    className="absolute text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-500 origin-center pb-2 px-4 text-center w-full"
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     {words[index]}
@@ -233,22 +241,22 @@ export default function Hero() {
               </div>
             </motion.h1>
 
-            <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-xl md:text-xl text-slate-500 dark:text-slate-400 mb-12 font-medium leading-relaxed text-balance">
-              Open <span className="text-brand-primary dark:text-white font-bold italic">New Doors</span> of Possibilities in Development, Design and Networking.
+            <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-[16px] md:text-xl text-slate-500 dark:text-slate-400 mb-8 md:mb-16 font-medium leading-relaxed text-balance">
+              <span className="text-brand-primary dark:text-white font-bold italic">CodeNext IT</span> provides professional web design, software development, and complete IT solutions to help businesses establish a strong and secure digital presence.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-brand-primary text-white px-10 py-4 rounded-2xl text-lg font-bold hover:shadow-tech transition-all flex items-center group relative overflow-hidden"
+                className="w-full max-w-[320px] sm:w-auto bg-brand-primary cursor-pointer text-white px-10 py-4 rounded-2xl text-[16px] font-bold hover:shadow-tech transition-all flex items-center justify-center group relative overflow-hidden"
               >
-                <span className="relative z-10 transition-transform group-hover:-translate-x-1">Start Building</span>
+                <span className="relative z-10 transition-transform group-hover:-translate-x-1">Get a Free Consultation</span>
                 <ArrowUpRight className="ml-2 w-6 h-6 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 relative z-10" />
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-brand-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </motion.button>
 
-              <a href="/portfolio" className="text-brand-primary dark:text-white px-10 py-4 rounded-2xl text-lg font-bold flex items-center group hover:bg-slate-50 dark:hover:bg-white/5 transition-all border-2 border-transparent hover:border-brand-border dark:hover:border-white/10">
+              <a href="/portfolio" className="w-full max-w-[320px] sm:w-auto text-brand-primary dark:text-white px-10 py-4 rounded-2xl text-[16px] font-bold flex items-center justify-center group hover:bg-slate-50 dark:hover:bg-white/5 transition-all border-2 border-brand-border dark:border-white/10 hover:border-brand-accent dark:hover:border-brand-accent">
                 Explore Portfolio
                 <motion.span className="ml-2 text-slate-300 dark:text-slate-600 group-hover:text-brand-accent transition-colors">
                   / /
@@ -313,9 +321,9 @@ export default function Hero() {
               <div className="lg:col-span-2 bg-white/[0.02] border-t lg:border-t-0 lg:border-l border-white/5 p-8 relative overflow-hidden flex flex-col justify-center">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <h3 className="text-white text-xl font-bold mb-6 flex items-center relative z-10">
+                <p className="text-white text-xl font-bold mb-6 flex items-center relative z-10">
                   <Zap className="w-5 h-5 text-emerald-400 mr-3" /> Production Build
-                </h3>
+                </p>
 
                 <div className="flex flex-col gap-4 relative z-10">
                   {/* Deployment Status */}

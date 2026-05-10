@@ -54,10 +54,10 @@ export default function Hosting() {
   ];
 
   const features = [
-    { name: 'cPanel Control Panel', icon: Server, desc: 'Industry-standard control panel for easy management.' },
-    { name: 'Daily Offsite Backups', icon: Cloud, desc: 'Automated backups to keep your data safe.' },
-    { name: 'Latest Technology', icon: Zap, desc: 'Powered by NVMe SSDs and LiteSpeed servers.' },
-    { name: 'Maximum Security', icon: Shield, desc: 'Free SSL, DDoS protection, and malware scanning.' },
+    { name: 'cPanel Control Panel', icon: Server, desc: 'Manage your website, emails, and databases effortlessly with the industry-standard, user-friendly cPanel interface.' },
+    { name: 'Automated Offsite Backups', icon: Cloud, desc: 'Ensure your business data is 100% secure with automated, daily offsite backups and easy one-click restore options.' },
+    { name: 'Ultra-Fast NVMe Servers', icon: Zap, desc: 'Experience lightning-fast website load times powered by enterprise-grade NVMe SSD storage and LiteSpeed web servers.' },
+    { name: 'Advanced Server Security', icon: Shield, desc: 'Keep your website safe from cyber threats with free SSL certificates, active DDoS protection, and real-time malware scanning.' },
   ];
 
   return (
@@ -84,8 +84,8 @@ export default function Hosting() {
               Fastest BDIX&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">Web Hosting</span>
             </h2>
-            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-              World Class Best Hosting Feature For You. Secure, scalable, and powered by CloudLinux Lightweight Virtual Environment (LVE).
+            <p className="text-slate-400 text-lg md:text-[16px] max-w-2xl mx-auto font-medium">
+              Experience ultra-fast load times and 99.9% uptime with our scalable hosting solutions. Powered by CloudLinux LVE to ensure maximum security for your business data.
             </p>
           </motion.div>
         </div>
@@ -151,7 +151,7 @@ export default function Hosting() {
         {/* Features Highlights */}
         <div>
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-black">What Makes CodeNext IT Different?</h3>
+            <h3 className="text-3xl font-black">What Makes Our Web Hosting Different?</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feat, idx) => (

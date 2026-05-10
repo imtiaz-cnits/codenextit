@@ -5,18 +5,18 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] pt-24 pb-0 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        
+
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-24">
-          
+
           {/* Left: Big Text */}
           <div className="lg:col-span-5">
-            <h2 className="text-4xl md:text-[2.75rem] font-black leading-tight text-white mb-8">
+            <p className="text-4xl md:text-[2.75rem] font-black font-sans leading-tight text-white mb-8">
               We are Serving<br />
               Knowledge,<br />
               Quality &<br />
               Perfection
-            </h2>
+            </p>
           </div>
 
           {/* Right: 3 Columns */}
@@ -65,7 +65,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
                   <div className="leading-relaxed">
                     <p>info@codenextit.com</p>
-                    <p>codenextit@gmail.com</p>
+                    <p>support@codenextit.com</p>
                   </div>
                 </li>
               </ul>
@@ -75,7 +75,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8 pt-10 border-t border-gray-800/80">
-          
+
           {/* Logo and Copyright */}
           <div className="flex flex-col items-center md:items-start">
             <a href="/" className="flex items-center space-x-3 mb-6 group">
@@ -103,7 +103,7 @@ export default function Footer() {
               <Linkedin className="w-[18px] h-[18px]" />
             </a>
             <a href="https://www.behance.net/codenextit" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
-              <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-3.213-2.556-3.213-1.465 0-2.274 1.175-2.409 3.213zm-11.444 7h-6.285v-15h7.014c2.614 0 4.046 1.488 4.046 3.652 0 1.94-1.258 2.804-2.831 3.125 1.921.36 3.149 1.579 3.149 3.738 0 2.502-1.83 4.485-5.093 4.485zm-2.054-6.559h-2.915v-3.793h2.645c1.199 0 2.158.463 2.158 1.879 0 1.482-1.042 1.914-2.188 1.914zm.299 5.867h-3.214v-4.103h3.048c1.685 0 2.656.452 2.656 2.05 0 1.637-1.168 2.053-2.49 2.053z"/></svg>
+              <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-3.213-2.556-3.213-1.465 0-2.274 1.175-2.409 3.213zm-11.444 7h-6.285v-15h7.014c2.614 0 4.046 1.488 4.046 3.652 0 1.94-1.258 2.804-2.831 3.125 1.921.36 3.149 1.579 3.149 3.738 0 2.502-1.83 4.485-5.093 4.485zm-2.054-6.559h-2.915v-3.793h2.645c1.199 0 2.158.463 2.158 1.879 0 1.482-1.042 1.914-2.188 1.914zm.299 5.867h-3.214v-4.103h3.048c1.685 0 2.656.452 2.656 2.05 0 1.637-1.168 2.053-2.49 2.053z" /></svg>
             </a>
             <a href="https://www.instagram.com/codenextit/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all">
               <Instagram className="w-[18px] h-[18px]" />
