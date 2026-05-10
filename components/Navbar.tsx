@@ -42,7 +42,7 @@ export default function Navbar() {
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-brand-accent rounded-full border-2 border-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tighter text-brand-primary dark:text-white leading-none uppercase">CodeNext</span>
+                <span className="text-xl font-black tracking-normal text-brand-primary dark:text-white leading-none uppercase">CodeNext IT</span>
                 <span className="text-[10px] font-black tracking-[0.3em] text-brand-accent uppercase mt-1 leading-none">Information Tech</span>
               </div>
             </a>
