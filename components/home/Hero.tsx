@@ -217,10 +217,10 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
                 </span>
               </div>
-              <h1 className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.1em] leading-none">
-                <span className="lg:hidden">Your Trusted IT Partner</span>
-                <span className="hidden lg:inline">Your Trusted IT & Web Development Company in Bangladesh</span>
+              <h1 className="text-[10px] hidden lg:inline sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.2em] leading-none">
+                Your Trusted IT & Web Development Company in Bangladesh
               </h1>
+              <span className="lg:hidden text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.2em] leading-none">Your Trusted IT Partner</span>
             </motion.div>
 
             <motion.h2 variants={itemVariants} className="text-[40px] md:text-7xl lg:text-[90px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] md:leading-[1.2] text-balance flex flex-col items-center justify-center">
