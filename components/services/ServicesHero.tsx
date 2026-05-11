@@ -81,13 +81,18 @@ export default function ServicesHero() {
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg shadow-brand-accent/5 mb-6"
+            className="inline-flex items-center space-x-3 px-5 py-2 rounded-2xl bg-slate-100/80 dark:bg-white/[0.03] backdrop-blur-xl border border-slate-200/60 dark:border-white/10 mb-8 shadow-2xl shadow-brand-accent/5 group hover:border-brand-accent/30 transition-all duration-300"
           >
-            <span className="relative flex h-2 w-2 mr-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+            <div className="relative flex items-center justify-center">
+              <div className="absolute inset-0 bg-brand-accent blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+              </span>
+            </div>
+            <span className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.2em] leading-none font-sans">
+              Crafting Digital Excellence
             </span>
-            <span className="text-[9px] md:text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-[0.2em]">Crafting Digital Excellence</span>
           </motion.div>
 
           <h1 className="text-4xl md:text-6xl lg:text-[80px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] text-balance">

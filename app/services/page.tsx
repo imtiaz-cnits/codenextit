@@ -9,19 +9,30 @@ import Stats from '../../components/home/Stats';
 import CallToAction from '../../components/home/CallToAction';
 
 export const metadata = {
-  title: 'Our Services | CodeNext IT',
-  description: 'Explore our wide range of IT services, tailored to fit your unique business needs.',
+  title: 'IT Services & Web Solutions in Bangladesh | CodeNext IT',
+  description: 'CodeNext IT offers professional web development, custom software, UI/UX design, mobile apps, digital marketing, and IT training services in Bangladesh.',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950">
       <Navbar />
-      
+
       <ServicesHero />
       <ClientsMarquee className="!bg-slate-50 dark:!bg-[#0B0F19] !border-none !py-10" />
       <DetailedServices />
-      
+
       {/* Adding a title for Stats section to match the original "We Lead From The Front" */}
       <section className="bg-slate-50 dark:bg-slate-900 pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
@@ -37,7 +48,7 @@ export default function ServicesPage() {
       </section>
 
       <CallToAction />
-      
+
       <Footer />
       <ThemeToggle />
       <ScrollToTop />
