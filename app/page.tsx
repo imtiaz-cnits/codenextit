@@ -61,10 +61,12 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
     "name": "CodeNext IT",
-    "url": "https://codenextit.com",
+    "url": "https://codenextit.com/",
     "logo": "https://codenextit.com/logo.png",
     "image": "https://codenextit.com/og-image.jpg",
     "description": "CodeNext IT is a premier technology agency in Bangladesh, providing custom software, modern web development, and digital infrastructure services.",
+    "telephone": "+8801788428280",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pabna",
@@ -83,7 +85,7 @@ export default function Home() {
       "https://linkedin.com/company/codenextit",
       "https://instagram.com/codenextit"
     ]
-  };
+  }
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
