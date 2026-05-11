@@ -208,7 +208,7 @@ export default function Hero() {
           >
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center space-x-3 px-5 py-2 rounded-2xl bg-white/5 dark:bg-brand-accent/5 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 mb-8 shadow-xl shadow-brand-accent/5 group hover:border-brand-accent/30 transition-colors"
+              className="inline-flex items-center space-x-3 px-5 py-2 rounded-2xl bg-slate-100/80 dark:bg-white/[0.03] backdrop-blur-xl border border-slate-200/60 dark:border-white/10 mb-8 shadow-2xl shadow-brand-accent/5 group hover:border-brand-accent/30 transition-all duration-300"
             >
               <div className="relative flex items-center justify-center">
                 <div className="absolute inset-0 bg-brand-accent blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
@@ -217,12 +217,12 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
                 </span>
               </div>
-              <span className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.25em] leading-none">
-                <span className="text-brand-accent">Trusted</span> IT Solutions Agency
-              </span>
+              <h1 className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.25em] leading-none">
+                Your Trusted IT & Web Development Company in Bangladesh
+              </h1>
             </motion.div>
 
-            <motion.h1 variants={itemVariants} className="text-[40px] md:text-7xl lg:text-[90px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] md:leading-[1.2] text-balance flex flex-col items-center justify-center">
+            <motion.h2 variants={itemVariants} className="text-[40px] md:text-7xl lg:text-[90px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] md:leading-[1.2] text-balance flex flex-col items-center justify-center">
               <span className="mb-3 md:mb-0">We Specialize in</span>
               <div className="relative h-[2.2em] md:h-[1em] w-full flex justify-center items-center">
                 <AnimatePresence mode="popLayout">
@@ -239,7 +239,7 @@ export default function Hero() {
                   </motion.span>
                 </AnimatePresence>
               </div>
-            </motion.h1>
+            </motion.h2>
 
             <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-[16px] md:text-xl text-slate-500 dark:text-slate-400 mb-8 md:mb-16 font-medium leading-relaxed text-balance">
               <span className="text-brand-primary dark:text-white font-bold italic">CodeNext IT</span> provides professional web design, software development, and complete IT solutions to help businesses establish a strong and secure digital presence.
