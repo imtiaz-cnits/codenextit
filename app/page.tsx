@@ -69,8 +69,10 @@ export default function Home() {
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "4th Floor, Hazi Akbar Ali Super Market, Abdul Hamid Road",
       "addressLocality": "Pabna",
       "addressRegion": "Rajshahi Division",
+      "postalCode": "6600",
       "addressCountry": "BD"
     },
     "contactPoint": {
