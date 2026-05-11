@@ -217,8 +217,9 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
                 </span>
               </div>
-              <h1 className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.25em] leading-none">
-                Your Trusted IT & Web Development Company in Bangladesh
+              <h1 className="text-[10px] sm:text-xs font-black text-brand-primary dark:text-white/90 uppercase tracking-[0.1em] leading-none">
+                <span className="lg:hidden">Your Trusted IT Partner</span>
+                <span className="hidden lg:inline">Your Trusted IT & Web Development Company in Bangladesh</span>
               </h1>
             </motion.div>
 
