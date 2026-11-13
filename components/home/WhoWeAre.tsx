@@ -29,9 +29,9 @@ export default function WhoWeAre() {
           >
             <div className="relative aspect-[5/5] rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-slate-800 group">
               <img
-                src="/images/codenext-team.jpg"
-                alt="CodeNext IT Team Celebrating"
-                className="w-full h-full object-cover object-bottom transition-transform duration-700 group-hover:scale-105"
+                src="/images/codenext-team.webp"
+                alt="CodeNext IT Tech Professional Working on Laptop"
+                className="w-full h-full object-cover object-[15%_center] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 to-transparent" />
             </div>

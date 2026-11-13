@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "slug": "themes-jet",
+    "title": "Themes Jet",
+    "client": "ThemesJet Global",
+    "category": "Web Development",
+    "year": "2024",
+    "mainImage": "/images/Themes Jet.png",
+    "tags": [
+      "React",
+      "Next.js",
+      "Marketplace"
+    ],
+    "overview": "Themes Jet is a premier digital marketplace designed for web templates, UI kits, and design assets. The platform provides a seamless experience for both authors to sell their creations and users to purchase high-quality digital goods with instant delivery.",
+    "challenge": "The primary challenge was to create a multi-vendor environment that could handle large file uploads, secure licensing, and real-time previews while maintaining lightning-fast performance across global regions.",
+    "solution": "We built a custom architecture using Next.js for SSR, AWS S3 for secure file storage, and a robust licensing engine. We implemented an automated preview system that allows users to test templates directly in the browser before purchasing.",
+    "techStack": [
+      {
+        "name": "Next.js 15",
+        "icon": "Code2"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "Layout"
+      },
+      {
+        "name": "Node.js",
+        "icon": "Settings"
+      },
+      {
+        "name": "AWS S3",
+        "icon": "Database"
+      },
+      {
+        "name": "Stripe",
+        "icon": "ShieldCheck"
+      }
+    ],
+    "features": [
+      {
+        "title": "Multi-Vendor Dashboard",
+        "desc": "Advanced dashboard for authors to manage products, sales, and analytics.",
+        "icon": "Layout"
+      },
+      {
+        "title": "Live Preview Engine",
+        "desc": "Instant browser-based previews for HTML and React templates.",
+        "icon": "Globe"
+      },
+      {
+        "title": "Secure Licensing",
+        "desc": "Automated unique license key generation and verification system.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": "One-Click Checkout",
+        "desc": "Ultra-fast payment processing with multiple global payment methods.",
+        "icon": "Zap"
+      }
+    ],
+    "results": [
+      {
+        "label": "Page Load Speed",
+        "value": "0.8s"
+      },
+      {
+        "label": "Conversion Rate",
+        "value": "+35%"
+      },
+      {
+        "label": "Active Authors",
+        "value": "500+"
+      },
+      {
+        "label": "Secure Downloads",
+        "value": "10k+"
+      }
+    ],
+    "liveLink": "https://themesjet.com"
+  },
+  {
+    "id": 2,
+    "slug": "the-ultrasound-source",
+    "title": "The Ultrasound Source",
+    "client": "Ultrasound Source Inc.",
+    "category": "E-Commerce",
+    "year": "2023",
+    "mainImage": "/images/The Ultrasound Source.png",
+    "tags": [
+      "Shopify",
+      "Healthcare",
+      "UI/UX"
+    ],
+    "overview": "The Ultrasound Source is a specialized e-commerce platform for high-end medical imaging equipment. We created a trustworthy and high-converting environment for healthcare professionals to procure critical medical technology.",
+    "challenge": "Selling high-value medical equipment requires a balance between technical specifications, trust signals, and a complex financing process that typical e-commerce platforms don't support out of the box.",
+    "solution": "We integrated a custom financing calculator and a multi-step inquiry system. The UI was designed with a \"medical-clean\" aesthetic, emphasizing reliability through detailed specs and verified certification badges.",
+    "techStack": [
+      {
+        "name": "Shopify Plus",
+        "icon": "ShieldCheck"
+      },
+      {
+        "name": "React",
+        "icon": "Code2"
+      },
+      {
+        "name": "Node.js",
+        "icon": "Settings"
+      },
+      {
+        "name": "GraphQL",
+        "icon": "Database"
+      }
+    ],
+    "features": [
+      {
+        "title": "Equipment Financing",
+        "desc": "Built-in financing calculator for high-ticket medical items.",
+        "icon": "Zap"
+      },
+      {
+        "title": "Inquiry System",
+        "desc": "Secure B2B quote request process for clinics and hospitals.",
+        "icon": "Globe"
+      }
+    ],
+    "results": [
+      {
+        "label": "Conversion Rate",
+        "value": "+45%"
+      },
+      {
+        "label": "Average Order Value",
+        "value": "$85k"
+      },
+      {
+        "label": "Lead Quality Score",
+        "value": "9.2/10"
+      }
+    ],
+    "liveLink": "https://theultrasoundsource.com"
+  },
+  {
+    "id": 3,
+    "slug": "montreal-moving",
+    "title": "Montreal Moving",
+    "client": "Montreal Moving Solutions",
+    "category": "Web Development",
+    "year": "2024",
+    "mainImage": "/images/Montreal Moving.png",
+    "tags": [
+      "Business",
+      "Booking System"
+    ],
+    "overview": "Montreal Moving is a high-performance booking and quoting web app designed for local relocation and commercial logistics. It streamlines client intake by calculating travel distance, furniture size, and estimated cost instantly.",
+    "challenge": "The client needed a responsive, automated system to handle scheduling, pricing estimation, and route mapping dynamically in real time without manual coordination.",
+    "solution": "We created a custom Next.js booking engine utilizing Google Maps Matrix API for exact distance-based pricing. The layout is optimized to load under 1 second to minimize bounce rates.",
+    "techStack": [
+      {
+        "name": "Next.js",
+        "icon": "Code2"
+      },
+      {
+        "name": "Google Maps API",
+        "icon": "Globe"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "Layout"
+      },
+      {
+        "name": "Prisma",
+        "icon": "Database"
+      }
+    ],
+    "features": [
+      {
+        "title": "Distance Calculator",
+        "desc": "Automated exact billing based on Google Maps travel calculation.",
+        "icon": "Zap"
+      },
+      {
+        "title": "Smart Booking Form",
+        "desc": "Interactive visual checklist of furniture for volume estimation.",
+        "icon": "Layout"
+      }
+    ],
+    "results": [
+      {
+        "label": "Booking Time Saved",
+        "value": "80%"
+      },
+      {
+        "label": "Conversion Increase",
+        "value": "+55%"
+      },
+      {
+        "label": "Customer Satisfaction",
+        "value": "4.9/5"
+      }
+    ],
+    "liveLink": "https://montrealmoving.ca"
+  },
+  {
+    "slug": "aka-moving-custom-web-platform-lead-generation-system",
+    "title": "AKA Moving",
+    "client": "Matthew Dacar",
+    "category": "Web Development",
+    "year": "2025",
+    "mainImage": "/uploads/1779136209390-AKA_Moving.png",
+    "imageAlt": "Custom Web Development and Lead Generation UI Design for AKA Moving Company in Montreal by CodeNext IT",
+    "tags": [
+      "Moving Company Website",
+      "Logistics Web Development",
+      "Lead Generation",
+      "Platform",
+      "UI/UX Redesign",
+      "Custom Booking System",
+      "Local SEO Montreal"
+    ],
+    "overview": "AKA Moving is a top-rated residential and commercial moving service provider based in Montreal, Canada. They required a high-performance, conversion-focused digital platform to streamline their client onboarding process. We delivered a complete UI/UX redesign and developed a robust web application tailored to maximize organic search visibility and generate qualified moving leads.",
+    "challenge": "The client was struggling with a low conversion rate due to an outdated user interface and a manual quoting process. Their previous website lacked local SEO structure, and potential customers found it difficult to quickly request service estimates. They needed an integrated, frictionless booking system capable of capturing complex move details (pickup locations, floor numbers, elevator access) without overwhelming the user.",
+    "solution": "We engineered a dynamic, conversion-optimized platform featuring a pixel-perfect UI. Our team developed a custom, multi-step \"Free Estimate Engine\" right in the hero section to instantly capture lead data. We strategically integrated trust indicators (Google, Yelp, HomeStars) and applied advanced localized SEO architecture, resulting in significantly higher organic rankings and a massive boost in daily quote requests.",
+    "techStack": [
+      {
+        "name": "Figma",
+        "icon": "Layout"
+      },
+      {
+        "name": "Next.js (Frontend Framework)",
+        "icon": "Code2"
+      },
+      {
+        "name": "Tailwind CSS (Styling)",
+        "icon": "Layout"
+      },
+      {
+        "name": "Node.js (Backend API / Form Handling)",
+        "icon": "Database"
+      }
+    ],
+    "features": [
+      {
+        "title": "Multi-Step Estimate Engine",
+        "desc": "A smart, interactive form that captures precise pickup, drop-off, and property details for instant quotes.",
+        "icon": "Code2"
+      },
+      {
+        "title": "Conversion-Optimized UI",
+        "desc": "Strategic placement of trust badges, verified reviews, and sticky CTA buttons to build client credibility.",
+        "icon": "Code2"
+      },
+      {
+        "title": "Localized SEO Architecture",
+        "desc": "Implemented Schema markups and structured local business data to dominate Montreal moving service search results.",
+        "icon": "Layout"
+      }
+    ],
+    "results": [
+      {
+        "label": "Lead Conversion Rate",
+        "value": "+45% Increase"
+      },
+      {
+        "label": "Page Load Speed",
+        "value": "< 1.2s"
+      },
+      {
+        "label": "Mobile Engagement",
+        "value": "+60% Growth"
+      }
+    ],
+    "liveLink": "https://akamoving.com/",
+    "id": 4
+  }
+]

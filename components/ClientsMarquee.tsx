@@ -1,7 +1,17 @@
 "use client";
 import { motion } from 'motion/react';
 
-export default function ClientsMarquee({ className = "", hideTitle = false }: { className?: string, hideTitle?: boolean }) {
+export default function ClientsMarquee({ 
+  className = "", 
+  hideTitle = false,
+  title = "Empowering 350+ Businesses",
+  subtitle = "OUR TRUSTED PARTNERS"
+}: { 
+  className?: string, 
+  hideTitle?: boolean,
+  title?: string,
+  subtitle?: string
+}) {
   const clients = [
     '/images/client-logos/ahcargo.svg',
     '/images/client-logos/aka-moving.svg',
@@ -24,9 +34,8 @@ export default function ClientsMarquee({ className = "", hideTitle = false }: { 
     <div className={`w-full overflow-hidden flex flex-col items-center py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-white/5 ${className}`}>
       {!hideTitle && (
         <div className="text-center mb-10 w-full max-w-7xl mx-auto px-4">
-          <p className="text-[12px] font-black text-brand-accent tracking-[0.3em] uppercase mb-3">OUR TRUSTED PARTNERS
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-brand-primary dark:text-white">Empowering 350+ Businesses</h2>
+          <p className="text-[12px] font-black text-brand-accent tracking-[0.3em] uppercase mb-3">{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-black text-brand-primary dark:text-white">{title}</h2>
         </div>
       )}
       <div

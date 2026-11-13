@@ -72,7 +72,7 @@ export default function ServicesHero() {
         ))}
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,20 +95,20 @@ export default function ServicesHero() {
             </span>
           </motion.div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-[80px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] text-balance">
-            Elevate Your&nbsp;
+          <h1 className="text-4xl md:text-6xl lg:text-[76px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1] text-balance">
+            Professional IT Services & Web Solutions to&nbsp;
             <span className="relative inline-block mt-2">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-400">Business</span>
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-400">Elevate Your Business</span>
               <div className="absolute bottom-1 left-0 w-full h-4 bg-brand-accent/20 -rotate-2 transform blur-md" />
             </span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-base md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed text-balance">
-            From visionary concepts to flawless execution. We deliver <span className="text-brand-primary dark:text-white font-bold italic">world-class</span> IT solutions designed to scale, perform, and dominate your industry.
+            From visionary concepts to flawless execution. <span className="text-brand-primary dark:text-white font-bold italic">CodeNext IT</span> provides custom software, mobile app development, UI/UX design, and secure hosting solutions designed to scale and dominate your industry.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <button className="w-full sm:w-auto bg-brand-primary dark:bg-white text-white dark:text-brand-primary px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-brand-primary/20 dark:shadow-white/10">
+            <button className="w-full sm:w-auto bg-brand-primary dark:bg-white text-white dark:text-brand-primary px-8 py-4 rounded-2xl font-bold text-[16px] uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-brand-primary/20 dark:shadow-white/10">
               Start a Project
             </button>
           </div>

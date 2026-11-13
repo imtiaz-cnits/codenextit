@@ -1,5 +1,6 @@
 "use client";
 import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
   return (
@@ -78,16 +79,8 @@ export default function Footer() {
 
           {/* Logo and Copyright */}
           <div className="flex flex-col items-center md:items-start">
-            <a href="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
-                <span className="font-bold text-xl">CN</span>
-              </div>
-              <div className="leading-none flex flex-col justify-center">
-                <span className="text-[1.35rem] font-black tracking-widest text-white">CODE</span>
-                <span className="text-[1.35rem] font-light tracking-widest text-white flex items-end">
-                  NEXT<span className="text-[0.6rem] ml-1 font-normal tracking-normal pb-1">IT</span>
-                </span>
-              </div>
+            <a href="/" className="inline-flex items-center mb-6 group" aria-label="CodeNext IT Home">
+              <BrandLogo variant="dark" className="h-7 sm:h-8 w-auto transition-opacity group-hover:opacity-90" />
             </a>
             <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest">
               ©2021 - 2026 | CODE NEXT IT SOLUTION

@@ -1,8 +1,9 @@
 "use client";
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown, Server, Cloud, BarChart, Bot } from 'lucide-react';
+import { Menu, X, ArrowRight, Settings, Code2, Layout, PenTool, ChevronDown, Server, Cloud, BarChart, Bot, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useModal } from './ModalContext';
+import BrandLogo from './BrandLogo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +34,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services', 
+    {
+      name: 'Services',
+      href: '/services',
       hasMegaMenu: true,
       subItems: [
         { name: 'Management Softwares', href: '/services/management-software', icon: Settings },
@@ -45,15 +46,15 @@ export default function Navbar() {
       ]
     },
     { name: 'Portfolio', href: '/portfolio' },
-    { 
-      name: 'Hosting', 
-      href: '', 
-      hasMegaMenu: true,
-      subItems: [
-        { name: 'Web Hosting', href: '/web-hosting', icon: Cloud },
-        { name: 'BDIX VPS', href: '/bdix-vps', icon: Server },
-      ]
-    },
+    // { 
+    //   name: 'Hosting', 
+    //   href: '', 
+    //   hasMegaMenu: true,
+    //   subItems: [
+    //     { name: 'Web Hosting', href: '/web-hosting', icon: Cloud },
+    //     { name: 'BDIX VPS', href: '/bdix-vps', icon: Server },
+    //   ]
+    // },
     { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' }
   ];
@@ -67,17 +68,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-24">
             <div className="flex items-center">
-              <a href="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-brand-primary rounded-2xl flex items-center justify-center transition-transform group-hover:rotate-12">
-                    <span className="text-white font-black text-xl italic underline decoration-brand-accent decoration-4">CN</span>
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-brand-accent rounded-full border-2 border-white" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-black tracking-normal text-brand-primary dark:text-white leading-none uppercase">CodeNext IT</span>
-                  <span className="text-[10px] font-black tracking-[0.3em] text-brand-accent uppercase mt-1 leading-none">Information Tech</span>
-                </div>
+              <a href="/" className="flex items-center group" aria-label="CodeNext IT Home">
+                <BrandLogo className="h-6 sm:h-7 lg:h-[30px] w-auto transition-transform duration-300 group-hover:scale-[1.02]" />
               </a>
             </div>
 
@@ -104,7 +96,7 @@ export default function Navbar() {
                             <Settings className="w-6 h-6" />
                           </div>
                           <div>
-                            <p className="text-brand-primary dark:text-white font-bold text-md mb-1">Management Softwares</p>
+                            <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1 font-sans">Management Softwares</h4>
                             <p className="text-slate-500 text-sm leading-relaxed font-medium">Optimize operations with our dynamic software services.</p>
                           </div>
                         </a>
@@ -114,7 +106,7 @@ export default function Navbar() {
                             <Code2 className="w-6 h-6" />
                           </div>
                           <div>
-                            <p className="text-brand-primary dark:text-white font-bold text-md mb-1">Web Development</p>
+                            <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1 font-sans">Web Development</h4>
                             <p className="text-slate-500 text-sm leading-relaxed font-medium">Elevate your online presence with our web expertise.</p>
                           </div>
                         </a>
@@ -124,7 +116,7 @@ export default function Navbar() {
                             <Layout className="w-6 h-6" />
                           </div>
                           <div>
-                            <p className="text-brand-primary dark:text-white font-bold text-md mb-1">UI/UX Design</p>
+                            <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1 font-sans">UI/UX Design</h4>
                             <p className="text-slate-500 text-sm leading-relaxed font-medium">Transforming concepts into seamless user experiences.</p>
                           </div>
                         </a>
@@ -134,7 +126,7 @@ export default function Navbar() {
                             <BarChart className="w-6 h-6" />
                           </div>
                           <div>
-                            <p className="text-brand-primary dark:text-white font-bold text-md mb-1">Digital Marketing & SEO</p>
+                            <h4 className="text-brand-primary dark:text-white font-bold text-md mb-1 font-sans">Digital Marketing & SEO</h4>
                             <p className="text-slate-500 text-sm leading-relaxed font-medium">Drive growth and visibility with our data-driven marketing.</p>
                           </div>
                         </a>
@@ -171,19 +163,33 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <motion.button
-                onClick={openBookingModal}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-br cursor-pointer from-brand-accent to-cyan-500 text-white pl-6 pr-2 py-2 rounded-xl text-[12px] md:text-[12px] font-bold uppercase tracking-widest flex items-center group overflow-hidden relative shadow-lg shadow-brand-accent/25 border-none"
+              <motion.a
+                href="tel:+8801788428280"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+                className="flex items-center space-x-3 pl-3 pr-4 py-2 rounded-2xl bg-slate-100/90 dark:bg-slate-950/60 backdrop-blur-xl border border-slate-300/80 dark:border-slate-800 shadow-md shadow-brand-primary/[0.05] group hover:border-brand-accent/50 dark:hover:border-brand-accent/40 hover:bg-white dark:hover:bg-slate-900/80 hover:shadow-xl hover:shadow-brand-accent/5 dark:hover:shadow-brand-accent/[0.04] transition-all duration-300 cursor-pointer"
               >
-                <span className="relative z-10">Book a Meeting</span>
-                <div className="ml-3 w-7 h-7 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:rotate-45 transition-transform relative z-10">
-                  <ArrowRight className="w-3.5 h-3.5" />
+                <div className="w-8 h-8 rounded-xl bg-brand-accent/10 dark:bg-brand-accent/20 border border-brand-accent/20 dark:border-brand-accent/30 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white group-hover:border-brand-accent dark:group-hover:bg-brand-accent dark:group-hover:text-white transition-all duration-300">
+                  <Phone className="w-3.5 h-3.5 group-hover:rotate-12 transition-transform" />
                 </div>
-                {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.button>
+                <div className="flex flex-col items-start leading-none">
+                  {/* Talk with Expert Indicator */}
+                  <div className="flex items-center space-x-1.5 mb-1.5">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                    <span className="text-[9px] font-black text-slate-600 dark:text-slate-400 uppercase tracking-[0.15em] font-sans leading-none">
+                      Talk with Expert
+                    </span>
+                  </div>
+                  {/* Typographically Rich Phone Number */}
+                  <span className="text-[16px] font-black text-brand-primary dark:text-white tracking-tight font-sans leading-none flex items-center">
+                    <span className="text-brand-accent mr-1 font-extrabold">+880</span>
+                    <span>1788 428 280</span>
+                  </span>
+                </div>
+              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -222,14 +228,14 @@ export default function Navbar() {
             >
               {/* Header */}
               <div className="p-6 flex justify-between items-center border-b border-slate-100 dark:border-white/5">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center">
-                    <span className="text-white font-black text-sm italic">CN</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-black text-sm uppercase tracking-tighter text-brand-primary dark:text-white">CodeNext IT</span>
-                  </div>
-                </div>
+                <a
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center"
+                  aria-label="CodeNext IT Home"
+                >
+                  <BrandLogo className="h-5 w-auto" />
+                </a>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="w-10 h-10 flex items-center justify-center bg-slate-50 dark:bg-white/5 rounded-xl text-slate-500 dark:text-slate-400"
@@ -270,7 +276,7 @@ export default function Navbar() {
                                     <div className="w-8 h-8 rounded-lg bg-white dark:bg-white/10 flex items-center justify-center mr-3 shadow-sm group-hover:bg-brand-accent group-hover:text-white transition-colors">
                                       <subItem.icon className="w-4 h-4" />
                                     </div>
-                                    <span className="text-sm font-bold text-slate-600 dark:text-slate-400 group-hover:text-brand-primary dark:group-hover:text-white">
+                                    <span className="text-sm font-bold text-slate-600 dark:text-slate-400 group-hover:text-brand-primary dark:group-hover:text-white font-sans">
                                       {subItem.name}
                                     </span>
                                   </a>
@@ -299,15 +305,17 @@ export default function Navbar() {
 
               {/* Footer / CTA */}
               <div className="p-6 border-t border-slate-100 dark:border-white/5 space-y-4 bg-white dark:bg-[#0B0F19]">
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    openBookingModal();
-                  }}
-                  className="w-full bg-gradient-to-br from-brand-accent to-cyan-500 text-white px-6 py-4 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-lg shadow-brand-accent/25"
+                <a
+                  href="tel:+8801788428280"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-2xl bg-gradient-to-br from-brand-accent to-cyan-500 text-white font-extrabold shadow-lg shadow-brand-accent/25 cursor-pointer text-center"
                 >
-                  Book a Meeting
-                </button>
+                  <Phone className="w-5 h-5 animate-pulse" />
+                  <div className="flex flex-col items-center">
+                    <span className="text-[9px] font-black uppercase tracking-widest leading-none mb-1 opacity-90">Talk with Expert</span>
+                    <span className="text-[14px] leading-none font-mono">+880 1788 428 280</span>
+                  </div>
+                </a>
                 <div className="flex justify-center pt-2">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Serving Knowledge & Perfection</p>
                 </div>

@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import ThemeToggle from '@/components/ThemeToggle';
 import ScrollToTop from '@/components/ScrollToTop';
 import CallToAction from '@/components/home/CallToAction';
-import { BLOG_POSTS } from '@/lib/data/blog';
+import { fetchBlogs } from '@/app/actions';
 
 // In Next.js 15, `params` is a Promise, so we must await it.
 // However, since we are doing static generation/dynamic routing, we handle it appropriately.
@@ -15,14 +15,15 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     // Resolve the params promise to get the ID
     const resolvedParams = await params;
     const postId = parseInt(resolvedParams.id, 10);
-    const post = BLOG_POSTS.find(p => p.id === postId);
+    const blogs = await fetchBlogs();
+    const post = blogs.find(p => p.id === postId);
 
     if (!post) {
         notFound();
     }
 
     // Get 3 related posts (excluding the current one)
-    const relatedPosts = BLOG_POSTS.filter(p => p.id !== postId).slice(0, 3);
+    const relatedPosts = blogs.filter(p => p.id !== postId).slice(0, 3);
 
     // Parse headings to generate dynamic TOC and inject IDs into the HTML
     const headings: { text: string; slug: string }[] = [];

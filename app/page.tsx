@@ -7,7 +7,6 @@ import Services from '../components/home/Services';
 import Portfolio from '../components/home/Portfolio';
 import TrustAndTech from '../components/home/TrustAndTech';
 import Process from '../components/home/Process';
-import Hosting from '../components/home/Hosting';
 import Testimonials from '../components/home/Testimonials';
 import CallToAction from '../components/home/CallToAction';
 import Footer from '../components/Footer';
@@ -104,7 +103,6 @@ export default function Home() {
         <Portfolio />
         <TrustAndTech />
         <Process />
-        <Hosting />
         <Testimonials />
       </main>
       <CallToAction />

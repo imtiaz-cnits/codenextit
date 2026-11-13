@@ -1,8 +1,8 @@
 "use client";
 import { motion } from 'motion/react';
-import { 
-  Code, Palette, Database, PenTool, 
-  Smartphone, Share2, GraduationCap, Server, 
+import {
+  Code, Palette, Database, PenTool,
+  Smartphone, Share2, GraduationCap, Server,
   CheckCircle2, ArrowRight, BarChart, Bot
 } from 'lucide-react';
 import { useModal } from '../ModalContext';
@@ -11,97 +11,127 @@ export default function DetailedServices() {
   const { openBookingModal } = useModal();
   const services = [
     {
-      title: 'Management Softwares',
-      desc: 'Optimize operations with our dynamic software services. Custom built for your specific industry needs.',
+      title: 'Custom Management Software',
+      desc: 'Streamline your business operations with secure, scalable, and tailored software solutions designed specifically for your industry needs.',
       icon: Database,
       accent: 'text-brand-accent',
       bgAccent: 'bg-brand-accent/10',
       borderAccent: 'group-hover:border-brand-accent/50',
       shadowAccent: 'hover:shadow-brand-accent/10',
       subServices: [
-        'School Management',
-        'Inventory Management',
-        'Diagnostic Center Management',
+        'School & College Management',
+        'Inventory & POS Systems',
+        'Diagnostic Center Software',
         'Custom ERP Solutions'
       ],
       slug: '/services/management-software'
     },
     {
-      title: 'Web Development',
-      desc: 'Elevate your online presence with our web expertise. Fast, secure, and highly scalable web applications.',
+      title: 'Professional Web Development',
+      desc: 'Build a powerful digital presence with fast, responsive, and SEO-optimized web applications tailored to drive business growth.',
       icon: Code,
       accent: 'text-indigo-500',
       bgAccent: 'bg-indigo-500/10',
       borderAccent: 'group-hover:border-indigo-500/50',
       shadowAccent: 'hover:shadow-indigo-500/10',
       subServices: [
-        'E-Commerce Website',
-        'Agency Website',
-        'Hotel & Restaurant Websites',
-        'Custom Web Apps'
+        'E-Commerce Platforms',
+        'Corporate Business Websites',
+        'Hotel & Booking Websites',
+        'Custom Web Applications'
       ],
       slug: '/services/web-development'
     },
     {
-      title: 'UI/UX Design',
-      desc: 'Transforming concepts into seamless user experiences. Engaging designs that drive conversions.',
+      title: 'UI/UX Product Design',
+      desc: 'Transform complex ideas into intuitive, user-centric interfaces. We design modern digital experiences that engage users and boost conversions.',
       icon: PenTool,
       accent: 'text-emerald-500',
       bgAccent: 'bg-emerald-500/10',
       borderAccent: 'group-hover:border-emerald-500/50',
       shadowAccent: 'hover:shadow-emerald-500/10',
       subServices: [
-        'Landing Pages',
-        'Website UI',
-        'Software Dashboard',
-        'Mobile App UI'
+        'High-Converting Landing Pages',
+        'Website UI Design',
+        'Software & SaaS Dashboards',
+        'Mobile App Interfaces'
       ],
       slug: '/services/ui-ux-design'
     },
     {
       title: 'Digital Marketing & SEO',
-      desc: 'Drive organic traffic and enhance your online visibility. Our data-driven strategies ensure maximum ROI for your business.',
+      desc: 'We build organic search strategies and targeted marketing campaigns that bring highly qualified traffic to your website and increase actual sales.',
       icon: BarChart,
       accent: 'text-blue-500',
       bgAccent: 'bg-blue-500/10',
       borderAccent: 'group-hover:border-blue-500/50',
       shadowAccent: 'hover:shadow-blue-500/10',
       subServices: [
-        'Search Engine Optimization',
-        'Social Media Marketing',
-        'PPC & Ad Campaigns',
-        'Content Strategy'
+        'Technical & Local SEO Services',
+        'B2B & B2C Lead Generation',
+        'Google Ads & PPC Campaigns',
+        'Conversion Rate Optimization (CRO)'
       ],
       slug: '/services/digital-marketing'
     },
     {
-      title: 'App Development',
-      desc: 'Give a better app experience to your customers. High performance native and cross-platform mobile apps.',
+      title: 'Mobile App Development',
+      desc: 'Reach your customers on the go with high-performance, secure, and user-friendly native and cross-platform mobile applications.',
       icon: Smartphone,
       accent: 'text-violet-500',
       bgAccent: 'bg-violet-500/10',
       borderAccent: 'group-hover:border-violet-500/50',
       shadowAccent: 'hover:shadow-violet-500/10',
       subServices: [
-        'iOS App Development',
-        'Android App Development',
+        'Native iOS Development',
+        'Native Android Development',
         'Cross-Platform (Flutter/React Native)',
-        'App UI/UX Design'
+        'App Maintenance & Support'
       ]
     },
     {
-      title: 'AI/ML Solutions',
-      desc: 'Future-proof your business with cutting-edge AI integration. Automate complex tasks and gain deeper insights.',
+      title: 'Social Media Management',
+      desc: 'Turn your social media profiles into active sales channels. We create authentic, engaging content that connects with your target audience and builds long-term brand loyalty.',
+      icon: Share2,
+      accent: 'text-pink-500',
+      bgAccent: 'bg-pink-500/10',
+      borderAccent: 'group-hover:border-pink-500/50',
+      shadowAccent: 'hover:shadow-pink-500/10',
+      subServices: [
+        'Creative Content Strategy',
+        'Targeted Paid Ad Campaigns (FB/IG)',
+        'Brand Awareness & Identity',
+        'Community Management & PR'
+      ]
+    },
+    {
+      title: 'AI & Machine Learning Solutions',
+      desc: 'Automate daily operations and make smarter, data-backed business decisions. We integrate practical AI models and smart automation tools tailored to your specific workflow.',
       icon: Bot,
       accent: 'text-amber-500',
       bgAccent: 'bg-amber-500/10',
       borderAccent: 'group-hover:border-amber-500/50',
       shadowAccent: 'hover:shadow-amber-500/10',
       subServices: [
-        'AI Chatbot Integration',
-        'Predictive Analytics',
-        'Process Automation',
-        'Custom ML Models'
+        'Intelligent Chatbots & Virtual Assistants',
+        'Predictive Data Analytics',
+        'Workflow Automation Systems (n8n)',
+        'Custom AI Integrations'
+      ]
+    },
+    {
+      title: 'Academic Industrial Training',
+      desc: 'Bridge the gap between university textbooks and real-world tech industry demands. Work on live projects using modern frameworks like Next.js alongside our senior engineering team.',
+      icon: GraduationCap,
+      accent: 'text-teal-500',
+      bgAccent: 'bg-teal-500/10',
+      borderAccent: 'group-hover:border-teal-500/50',
+      shadowAccent: 'hover:shadow-teal-500/10',
+      subServices: [
+        'Polytechnic Institute Industrial Training',
+        'University Industrial Training',
+        'Direct Mentorship from Experts',
+        'Career Strategy & Interview Preparation'
       ]
     },
     {
@@ -113,10 +143,10 @@ export default function DetailedServices() {
       borderAccent: 'group-hover:border-cyan-500/50',
       shadowAccent: 'hover:shadow-cyan-500/10',
       subServices: [
-        'Shared BDIX Web Hosting',
+        'High-Speed BDIX Shared Hostings',
         'Premium BDIX VPS',
-        'Dedicated Servers',
-        'Domain Registration'
+        'Manageds Dedicated Servers',
+        'Global Domain Registration'
       ]
     }
   ];
@@ -142,7 +172,7 @@ export default function DetailedServices() {
                   <service.icon className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-black text-brand-primary dark:text-white mb-3 tracking-tight">
+                  <h3 className="text-2xl md:text-[1.6rem] font-black text-brand-primary dark:text-white mb-3 tracking-tight">
                     {service.title}
                   </h3>
                   <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
@@ -165,7 +195,7 @@ export default function DetailedServices() {
                   <a href={service.slug || "#"} className={`inline-flex items-center font-bold ${service.accent} group/btn`}>
                     Learn More <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
-                  <button 
+                  <button
                     onClick={openBookingModal}
                     className={`px-6 py-2.5 rounded-xl text-white font-bold text-sm ${service.accent.replace('text-', 'bg-')} shadow-lg shadow-current/20 hover:scale-105 transition-all`}
                   >

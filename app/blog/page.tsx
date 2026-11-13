@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Calendar, User, Clock, ChevronRight, ArrowRight, Filter, Mail, Share2, Bookmark } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -13,20 +13,27 @@ import CallToAction from '@/components/home/CallToAction';
 import WhoWeAre from '@/components/home/WhoWeAre';
 import Process from '@/components/home/Process';
 import Image from 'next/image';
-import { BLOG_POSTS, CATEGORIES } from '@/lib/data/blog';
+import { CATEGORIES } from '@/lib/data/blog';
+import { fetchBlogs } from '@/app/actions';
+import { BlogPost } from '@/lib/db';
 
 export default function BlogPage() {
+    const [posts, setPosts] = useState<BlogPost[]>([]);
     const [activeCategory, setActiveCategory] = useState("All");
     const [searchQuery, setSearchQuery] = useState("");
 
-    const filteredPosts = BLOG_POSTS.filter(post => {
+    useEffect(() => {
+        fetchBlogs().then(data => setPosts(data));
+    }, []);
+
+    const filteredPosts = posts.filter(post => {
         const matchesCategory = activeCategory === "All" || post.category === activeCategory;
         const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
 
-    const featuredPost = BLOG_POSTS.find(post => post.featured);
+    const featuredPost = posts.find(post => post.featured);
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] transition-colors duration-300">
@@ -57,10 +64,10 @@ export default function BlogPage() {
                                 <span className="text-[9px] md:text-[10px] font-black text-brand-accent uppercase tracking-[0.2em]">Insights & Innovation</span>
                             </motion.div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-[70px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-8 leading-[1.1] text-balance">
-                                Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-blue-500 to-cyan-500">Insights</span>
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-brand-primary dark:text-white mb-6 text-balance">
+                                Latest <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand-accent to-cyan-500">Insights</span>
                             </h1>
-                            <p className="max-w-3xl mx-auto text-base md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed text-balance">
+                            <p className="max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-8">
                                 Expert perspectives on the technologies shaping tomorrow. <br className="hidden md:block" /> Stay ahead with CodeNext IT's deep dives into tech trends.
                             </p>
                         </motion.div>

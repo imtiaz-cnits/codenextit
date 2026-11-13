@@ -18,6 +18,20 @@
 }
 
 @layer base {
+  :root {
+    --logo-accent-start: #0062FF;
+    --logo-accent-end: #06B6D4;
+    --logo-code-start: #0062FF;
+    --logo-code-end: #06B6D4;
+  }
+
+  .dark {
+    --logo-accent-start: #3B82F6;
+    --logo-accent-end: #22D3EE;
+    --logo-code-start: #ffffff;
+    --logo-code-end: #ffffff;
+  }
+
   *, *::before, *::after {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

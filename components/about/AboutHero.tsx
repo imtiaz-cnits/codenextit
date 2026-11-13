@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from 'react';
+import { Rocket, Target, Users } from 'lucide-react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
-import { Users, Target, Rocket, Heart } from 'lucide-react';
+import { useEffect } from 'react';
 
 export default function AboutHero() {
   const mouseX = useMotionValue(0);
@@ -61,7 +61,7 @@ export default function AboutHero() {
             <span className="text-[9px] md:text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-[0.2em]">Who We Are</span>
           </motion.div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-[70px] font-extrabold tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] text-balance">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-brand-primary dark:text-white mb-6 leading-[1.1] text-balance">
             We Believe in Technology & <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-400">Power of Team Work</span>
           </h1>

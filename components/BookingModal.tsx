@@ -17,6 +17,7 @@ import {
   ChevronDown,
   Layout
 } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -121,10 +122,8 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 </div>
 
                 <div className="relative z-10 mt-10 pt-8 border-t border-white/10">
-                  <p className="text-[10px] uppercase font-black tracking-[0.2em] text-brand-accent mb-2">Powering Innovation</p>
-                  <div className="flex items-center space-x-2 text-white font-black text-lg tracking-tight">
-                    CodeNext IT
-                  </div>
+                  <p className="text-[10px] uppercase font-black tracking-[0.2em] text-brand-accent mb-3">Powering Innovation</p>
+                  <BrandLogo variant="dark" className="h-4 w-auto" />
                 </div>
 
                 {/* Decorative Pattern */}

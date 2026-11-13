@@ -1,10 +1,32 @@
 "use client";
+import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, PhoneCall, Sparkles } from 'lucide-react';
 import { useModal } from '../ModalContext';
 
-export default function CallToAction() {
+export default function CallToAction({
+  badge = "Let's Work Together",
+  title,
+  description = "Join hundreds of successful businesses who trust CodeNext IT for their web development, app design, and secure networking infrastructure.",
+  primaryBtnText = "Start a Project",
+  secondaryBtnText = "Call Us Now",
+  secondaryBtnLink = "tel:+8801788428280"
+}: {
+  badge?: string;
+  title?: React.ReactNode;
+  description?: string;
+  primaryBtnText?: string;
+  secondaryBtnText?: string;
+  secondaryBtnLink?: string;
+}) {
   const { openBookingModal } = useModal();
+
+  const defaultTitle = (
+    <>
+      Ready to transform your <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-500">digital presence?</span>
+    </>
+  );
+
   return (
     <section className="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
       {/* Background Decor */}
@@ -25,7 +47,7 @@ export default function CallToAction() {
                 className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 mb-6 shadow-sm dark:shadow-none"
               >
                 <Sparkles className="w-4 h-4 text-brand-accent" />
-                <span className="text-xs font-bold text-brand-primary dark:text-white uppercase tracking-widest">Let's Work Together</span>
+                <span className="text-xs font-bold text-brand-primary dark:text-white uppercase tracking-widest">{badge}</span>
               </motion.div>
 
               <motion.h2
@@ -33,9 +55,9 @@ export default function CallToAction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-primary dark:text-white mb-6 leading-[1.1]"
+                className="text-4xl md:text-5xl lg:text-5xl font-black text-brand-primary dark:text-white mb-6 leading-[1.1]"
               >
-                Ready to transform your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-cyan-500">digital presence?</span>
+                {title || defaultTitle}
               </motion.h2>
 
               <motion.p
@@ -45,7 +67,7 @@ export default function CallToAction() {
                 transition={{ delay: 0.2 }}
                 className="text-slate-500 dark:text-slate-400 text-[16px] mb-8 max-w-lg font-medium"
               >
-                Join hundreds of successful businesses who trust CodeNext IT for their web development, app design, and secure networking infrastructure.
+                {description}
               </motion.p>
 
               <motion.div
@@ -59,12 +81,12 @@ export default function CallToAction() {
                   onClick={openBookingModal}
                   className="bg-brand-accent text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-brand-primary dark:hover:bg-white dark:hover:text-black transition-all group shadow-lg shadow-brand-accent/20"
                 >
-                  Start a Project
+                  {primaryBtnText}
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <a href="tel:+88001788428280" className="bg-white dark:bg-white/5 text-brand-primary dark:text-white border border-slate-200 dark:border-white/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:border-brand-accent dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
+                <a href={secondaryBtnLink} className="bg-white dark:bg-white/5 text-brand-primary dark:text-white border border-slate-200 dark:border-white/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:border-brand-accent dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
                   <PhoneCall className="w-5 h-5 mr-2 text-brand-accent group-hover:scale-110 transition-transform" />
-                  Call Us Now
+                  {secondaryBtnText}
                 </a>
               </motion.div>
             </div>

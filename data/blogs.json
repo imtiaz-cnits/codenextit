@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Web Development: Trends to Watch in 2026",
+    "excerpt": "Explore the emerging technologies and frameworks that are shaping the future of web development, from AI-driven coding to edge computing.",
+    "content": "\n<h2>Introduction</h2>\n<p>The web development landscape is evolving at an unprecedented pace. As we navigate through 2026, several key trends have shifted from experimental concepts to industry standards. This article explores the most significant trends that every developer should watch.</p>\n\n<h3>1. AI-Driven Development</h3>\n<p>Artificial Intelligence is no longer just a buzzword; it's deeply integrated into our development workflows. From intelligent code completion to automated testing and bug fixing, AI tools are making developers more productive than ever.</p>\n\n<h3>2. Edge Computing</h3>\n<p>Moving computation closer to the source of data is revolutionizing how we build web applications. Edge computing drastically reduces latency, improves performance, and offers better security for distributed applications.</p>\n\n<h3>3. Serverless Architectures</h3>\n<p>The abstraction of servers continues to gain momentum. With platforms offering seamless scaling and reduced operational overhead, more companies are adopting serverless architectures for their primary applications.</p>\n\n<h3>Conclusion</h3>\n<p>Staying ahead in web development requires continuous learning and adaptation. Embracing these trends will not only future-proof your skills but also enable you to build more robust and scalable applications.</p>\n    ",
+    "category": "Web Development",
+    "author": "Imtiaz Ahmed",
+    "authorImage": "https://ui-avatars.com/api/?name=Imtiaz+Ahmed&background=0062FF&color=fff",
+    "date": "April 25, 2026",
+    "readTime": "8 min read",
+    "image": "/images/blog/featured.png",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Mastering UI/UX: Creating Human-Centric Digital Experiences",
+    "excerpt": "Design is more than just aesthetics. Learn how to create interfaces that prioritize user needs and emotional connection.",
+    "content": "\n<h2>The Core of Human-Centric Design</h2>\n<p>In 2026, user experience is the primary differentiator for digital products. Beautiful interfaces are common, but truly intuitive, human-centric experiences remain a challenge.</p>\n\n<h2>Understanding Emotional Design</h2>\n<p>Every interaction a user has with your product evokes an emotion. Whether it's the satisfaction of a fluid animation or the frustration of a confusing navigation menu, these emotional responses dictate user retention.</p>\n\n<h2>Accessibility is Non-Negotiable</h2>\n<p>Modern UI/UX design places accessibility at its core. Designing for all users, regardless of their abilities, is not just a legal requirement in many regions—it's a moral imperative and good business practice.</p>\n\n<h2>Micro-Interactions Matter</h2>\n<p>The smallest details often make the biggest impact. Micro-interactions—like a subtle hover state or a satisfying toggle switch—provide immediate feedback and make digital spaces feel tactile and alive.</p>\n    ",
+    "category": "UI/UX Design",
+    "author": "Sarah J.",
+    "authorImage": "https://ui-avatars.com/api/?name=Sarah+J&background=0062FF&color=fff",
+    "date": "April 22, 2026",
+    "readTime": "6 min read",
+    "image": "/images/blog/uiux.png",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "AI & ML in 2026: Beyond the Hype",
+    "excerpt": "How artificial intelligence is moving from experimental phases to core business infrastructures across industries.",
+    "content": "\n<h2>Moving Past the Hype Cycle</h2>\n<p>We've passed the peak of inflated expectations regarding Artificial Intelligence. In 2026, the focus is purely on practical, scalable applications of Machine Learning models in everyday business operations.</p>\n\n<h3>Predictive Analytics</h3>\n<p>Businesses are leveraging AI to predict market trends, customer behavior, and potential supply chain disruptions with unprecedented accuracy.</p>\n\n<h3>Natural Language Processing (NLP)</h3>\n<p>Conversational interfaces have become practically indistinguishable from human operators. NLP has revolutionized customer support, content generation, and internal knowledge management.</p>\n    ",
+    "category": "AI & ML",
+    "author": "Dr. Robert Chen",
+    "authorImage": "https://ui-avatars.com/api/?name=Robert+Chen&background=0062FF&color=fff",
+    "date": "April 18, 2026",
+    "readTime": "10 min read",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+    "featured": false
+  }
+]

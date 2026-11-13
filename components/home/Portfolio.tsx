@@ -1,46 +1,17 @@
 "use client";
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import { fetchPortfolios } from '@/app/actions';
+import { ProjectDetail } from '@/lib/db';
 
 export default function Portfolio() {
-  const projects = [
-    {
-      title: 'Themes Jet',
-      category: 'Premium Digital Marketplace for Web Templates & Assets',
-      image: '/images/Themes Jet.png',
-      tags: ['React', 'Marketplace'],
-      slug: 'themes-jet'
-    },
-    {
-      title: 'The Ultrasound Source',
-      category: 'Medical Equipment E-Commerce',
-      image: '/images/The Ultrasound Source.png',
-      tags: ['E-Commerce', 'Healthcare'],
-      slug: 'the-ultrasound-source'
-    },
-    {
-      title: 'Montreal Moving',
-      category: 'Moving & Relocation Services',
-      image: '/images/Montreal Moving.png',
-      tags: ['Business', 'Booking'],
-      slug: 'montreal-moving'
-    },
-    {
-      title: 'AKA Moving',
-      category: 'Logistics & Transportation Services',
-      image: '/images/AKA Moving.png',
-      tags: ['Corporate', 'Logistics'],
-      slug: 'aka-moving'
-    },
-    {
-      title: 'SPS Foods',
-      category: 'Food Distribution Network',
-      image: '/images/SPS Foods.png',
-      tags: ['FMCG', 'Web App'],
-      slug: 'sps-foods'
-    },
-  ];
+  const [projects, setProjects] = useState<ProjectDetail[]>([]);
+
+  useEffect(() => {
+    fetchPortfolios().then(data => setProjects(data));
+  }, []);
 
   return (
     <section id="portfolio" className="py-16 md:py-24 bg-white dark:bg-slate-900">
@@ -74,7 +45,7 @@ export default function Portfolio() {
               <Link href={`/portfolio/${project.slug}`} className="group cursor-pointer">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-brand-surface dark:bg-slate-800/20 border border-brand-border dark:border-slate-800/50">
                   <img
-                    src={project.image}
+                    src={project.mainImage}
                     alt={`Case study showing ${project.title} - ${project.category}. Professional web development project by CodeNext IT.`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -86,19 +57,21 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h3 className="text-2xl font-bold text-brand-primary dark:text-white mb-2 group-hover:text-brand-accent transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-slate-500 dark:text-slate-400 font-medium">{project.category}</p>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-400 dark:text-slate-500 border border-slate-100 dark:border-slate-700/50">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {project.tags && project.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 sm:justify-end sm:max-w-[65%] shrink-0">
+                      {project.tags.slice(0, 2).map((tag, tIdx) => (
+                        <span key={tIdx} className="px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-400 dark:text-slate-500 border border-slate-100 dark:border-slate-700/50">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Link>
             </motion.div>
